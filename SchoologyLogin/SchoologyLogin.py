@@ -22,13 +22,13 @@ def login(username, password):
 
 	time.sleep(2)
 	ConnectPageEmail = driver.find_element_by_xpath('//*[@id="identifierId"]')
-	ConnectPageEmail.send_keys('200610@northcantonschools.org')
+	ConnectPageEmail.send_keys(username)
 	NextButton = driver.find_element_by_xpath('//*[@id="identifierNext"]/span/span')
 	NextButton.click()
 
 	time.sleep(2)
 	ConnectPagePassword = driver.find_element_by_xpath('//*[@id="password"]/div[1]/div/div[1]/input')
-	ConnectPagePassword.send_keys('Yes0Bid1')
+	ConnectPagePassword.send_keys(password)
 	ConnectPageNextButton = driver.find_element_by_xpath('//*[@id="passwordNext"]/span/span')
 	ConnectPageNextButton.click()
 
